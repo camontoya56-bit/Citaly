@@ -1,0 +1,9 @@
+:root{--ac:#0f766e;--ln:#e4e2da;--mt:#6b726e}
+*{box-sizing:border-box}body{margin:0;background:#f6f5f1;color:#1b1f1d;font:15px/1.45 system-ui,sans-serif}
+.w{max-width:640px;margin:0 auto;padding:16px}.card{background:#fff;border:1px solid var(--ln);border-radius:14px;padding:14px;margin-bottom:12px}
+input,select{width:100%;font:inherit;padding:9px 11px;border:1px solid var(--ln);border-radius:10px;margin-bottom:8px}
+button{font:inherit;cursor:pointer;border:1px solid var(--ln);background:#fff;border-radius:10px;padding:8px 12px;font-weight:600}
+button.p{background:var(--ac);color:#fff;border-color:var(--ac)}button:disabled{opacity:.4}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}.chips button.on{background:var(--ac);color:#fff}
+.ap{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--ln)}
+small{color:var(--mt)}a{color:var(--ac)}
