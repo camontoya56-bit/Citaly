@@ -14,8 +14,9 @@ export default function Reserva({ params }) {
   const slots = []; for (let m = n.hora_inicio; m < n.hora_fin; m += 30) slots.push(m);
   async function reservar() {
     setErr("");
-    const { error } = await supabase.rpc("crear_reserva", { p_slug: slug, p_servicio: s.id, p_cliente: nom, p_tel: telx(tel), p_fecha: fecha, p_inicio: t });
+    const { data: cid, error } = await supabase.rpc("crear_reserva", { p_slug: slug, p_servicio: s.id, p_cliente: nom, p_tel: telx(tel), p_fecha: fecha, p_inicio: t });
     if (error) return setErr(error.message);
+    fetch("/api/notificar", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: cid }) }).catch(() => {});
     setConf({ d: fecha, t, n: nom }); setOk(true);
   }
   if (ok) return <div className="w"><div className="card"><h2>✅ Reserva confirmada</h2><p>{conf.n}, te esperamos el {new Date(conf.d + "T12:00").toLocaleDateString("es", { weekday: "long", day: "numeric", month: "long" })} a las {hm(conf.t)} en {n.nombre}.</p>{n.whatsapp && <><p><small>Un último paso: avísale al negocio por WhatsApp para que tu cita quede confirmada.</small></p><a href={wame(n.whatsapp, `Hola, soy ${conf.n}. Reservé ${s?.nombre} el ${conf.d} a las ${hm(conf.t)}.`)} target="_blank" rel="noreferrer"><button className="p">Confirmar por WhatsApp</button></a></>}</div></div>;
