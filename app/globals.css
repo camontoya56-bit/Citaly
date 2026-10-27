@@ -7,3 +7,15 @@ button.p{background:var(--ac);color:#fff;border-color:var(--ac)}button:disabled{
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}.chips button.on{background:var(--ac);color:#fff}
 .ap{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--ln)}
 small{color:var(--mt)}a{color:var(--ac)}
+.L{max-width:920px;margin:0 auto;padding:0 18px 40px}
+.hero{text-align:center;padding:56px 0 24px}.hero h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:0 0 12px}
+.hero p{font-size:17px;color:var(--mt);max-width:620px;margin:0 auto 18px}
+.badge{display:inline-block;background:#d1f0ea;color:#0b5a54;border-radius:99px;padding:5px 14px;font-weight:700;font-size:13px;margin-bottom:14px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px}
+.t{background:#fff;border:1px solid var(--ln);border-radius:14px;padding:16px;text-align:center}
+.t .e{font-size:30px}.t b{display:block;margin:6px 0 2px}.t small{display:block}
+.n{width:32px;height:32px;border-radius:50%;background:var(--ac);color:#fff;display:inline-grid;place-items:center;font-weight:700}
+h2.s{text-align:center;margin:44px 0 16px;font-size:24px}
+.price{max-width:340px;margin:0 auto;text-align:center;border:2px solid var(--ac)}.price .pr{font-size:38px;font-weight:800}
+.price ul{list-style:none;padding:0;margin:10px 0 16px;text-align:left}.price li{padding:4px 0}.price li:before{content:"✓ ";color:var(--ac);font-weight:700}
+.big{padding:12px 22px;font-size:16px}
