@@ -25,6 +25,7 @@ export default function Login() {
         <select value={f.tipo} onChange={set("tipo")}>{TIPOS.map((t) => <option key={t}>{t}</option>)}</select></>}
       <input type="email" placeholder="Correo" value={f.email} onChange={set("email")} required />
       <input type="password" placeholder="Contraseña (mín. 6)" minLength={6} value={f.pw} onChange={set("pw")} required />
+      {reg && <label style={{ display: "flex", gap: 8, margin: "4px 0 10px" }}><input type="checkbox" required style={{ width: "auto", margin: 0 }} /><small>Acepto los <a href="/terminos" target="_blank">Términos</a> y la <a href="/privacidad" target="_blank">Política de privacidad</a></small></label>}
       {err && <p style={{ color: err.startsWith("Cuenta") ? "#0f766e" : "#b91c1c" }}>{err}</p>}
       <button className="p" type="submit">{reg ? "Crear cuenta" : "Entrar"}</button>{" "}
       <button type="button" onClick={() => setReg(!reg)}>{reg ? "Ya tengo cuenta" : "Soy nuevo"}</button>

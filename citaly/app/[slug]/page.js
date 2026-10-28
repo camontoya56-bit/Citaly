@@ -28,6 +28,7 @@ export default function Reserva({ params }) {
       <b>4. Tus datos</b><input placeholder="Nombre completo" value={nom} onChange={(e) => setNom(e.target.value)} />
       <input placeholder="Tu WhatsApp (ej. 3001234567)" inputMode="tel" value={tel} onChange={(e) => setTel(e.target.value)} />
       {err && <p style={{ color: "#b91c1c" }}>{err}</p>}
+      <p><small>Al reservar aceptas que {n.nombre} use tus datos para gestionar tu cita. <a href="/privacidad" target="_blank">Privacidad</a></small></p>
       <button className="p" disabled={t === null || nom.trim().length < 2 || telx(tel).length < 11} onClick={reservar}>Confirmar reserva</button></div></div>
   );
 }

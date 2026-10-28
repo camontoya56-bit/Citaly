@@ -25,7 +25,7 @@ export default function Home() {
         <ul><li>Citas y servicios ilimitados</li><li>Tu enlace de reservas propio</li><li>Recordatorios por WhatsApp</li><li>Soporte por WhatsApp</li></ul>
         <Link href="/login"><button className="p big" style={{ width: "100%" }}>Empezar mis 14 días gratis</button></Link>
         <small style={{ marginTop: 8 }}>Sin tarjeta y sin permanencia.</small></div>
-      <p style={{ textAlign: "center", marginTop: 40 }}><small>¿Dudas? Escríbenos por <a href={wame(WA, "Hola, tengo una pregunta sobre Citaly")} target="_blank" rel="noreferrer">WhatsApp</a>.</small></p>
+      <p style={{ textAlign: "center", marginTop: 40 }}><small>¿Dudas? Escríbenos por <a href={wame(WA, "Hola, tengo una pregunta sobre Citaly")} target="_blank" rel="noreferrer">WhatsApp</a>.</small><br /><small><a href="/terminos">Términos</a> · <a href="/privacidad">Privacidad</a></small></p>
     </div>
   );
 }
