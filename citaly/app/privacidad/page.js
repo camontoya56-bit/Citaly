@@ -1,5 +1,5 @@
 export const metadata = { title: "Política de privacidad · Citaly" };
-const RESP = "[Nombre o razón social del responsable]", MAIL = "camontoya56@gmail.com";
+const RESP = "Carlos Alberto Montoya Cano", MAIL = "camontoya56@gmail.com";
 const T = [["1. Quién trata tus datos", `${RESP} (Citaly) es responsable de los datos de las cuentas de los negocios. Cada negocio es responsable de los datos de sus propios clientes, y Citaly actúa como encargado que los almacena por cuenta del negocio.`],
 ["2. Qué datos recogemos", "De los negocios: nombre, correo, WhatsApp, servicios y horario. De los clientes que reservan: nombre, número de WhatsApp, y el servicio, día y hora de la cita. No pedimos datos sensibles ni información clínica."],
 ["3. Para qué los usamos", "Para gestionar agenda y reservas, enviar avisos de nuevas citas y permitir el contacto entre el negocio y su cliente. No vendemos tus datos ni los usamos para publicidad de terceros."],
