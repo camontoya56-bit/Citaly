@@ -1,5 +1,5 @@
 export const metadata = { title: "Términos de uso · Citaly" };
-const RESP = "[Nombre o razón social del responsable]", MAIL = "camontoya56@gmail.com";
+const RESP = "Carlos Alberto Montoy Cano", MAIL = "camontoya56@gmail.com";
 const T = [["1. Qué es Citaly", "Citaly es una herramienta en línea para que profesionales y negocios gestionen su agenda y reciban reservas de sus clientes."],
 ["2. Cuenta", "Debes dar datos verdaderos y cuidar tu contraseña. Eres responsable de lo que ocurra con tu cuenta."],
 ["3. Prueba y pago", "Cada negocio nuevo tiene 14 días de prueba sin costo. Después, el servicio requiere un plan de pago mensual. Si el plan vence, las reservas en línea se suspenden y tus datos se conservan para cuando lo reactives."],
