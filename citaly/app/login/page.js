@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "../../lib/supabase";
+import Logo from "../Logo";
 const TIPOS = ["Barbería", "Salón", "Tutor", "Psicólogo", "Consultor"];
 export default function Login() {
   const r = useRouter();
@@ -19,7 +20,7 @@ export default function Login() {
     r.push("/dashboard");
   }
   return (
-    <div className="w"><form className="card" onSubmit={enviar}>
+    <div className="w"><p style={{ textAlign: "center" }}><Logo size={40} /></p><form className="card" onSubmit={enviar}>
       <h2>{reg ? "Crear mi agenda (14 días gratis)" : "Iniciar sesión"}</h2>
       {reg && <><input placeholder="Nombre de tu negocio" value={f.nombre} onChange={set("nombre")} required />
         <select value={f.tipo} onChange={set("tipo")}>{TIPOS.map((t) => <option key={t}>{t}</option>)}</select></>}

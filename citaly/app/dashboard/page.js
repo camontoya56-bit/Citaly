@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
+import Logo from "../Logo";
 import { useRouter } from "next/navigation";
 import { supabase, hm, hoy, sumaDias, WA, PRECIO, tel, wame } from "../../lib/supabase";
 export default function Dashboard() {
@@ -26,11 +27,12 @@ export default function Dashboard() {
   const ingresos = citas.reduce((s, c) => s + Number(c.servicios?.precio || 0), 0);
   const salir = async () => { await supabase.auth.signOut(); r.push("/login"); };
   if (!vigente) return (
-    <div className="w"><div className="card"><h2>Tu periodo de prueba terminó</h2>
+    <div className="w"><p><Logo size={30} /></p><div className="card"><h2>Tu periodo de prueba terminó</h2>
       <p>Tus datos están guardados. Activa tu plan ({PRECIO}) para volver a recibir reservas.</p>
       <a href={activar} target="_blank" rel="noreferrer"><button className="p">Activar por WhatsApp</button></a>{" "}<button onClick={salir}>Salir</button></div></div>);
   return (
     <div className="w">
+      <p><Logo size={30} /></p>
       {neg.plan !== "activo" && <div className="card" style={{ background: "#d1f0ea" }}>Prueba gratis: te quedan <b>{dias} días</b>. <a href={activar} target="_blank" rel="noreferrer">Activar plan</a></div>}
       <div className="card"><b>{neg.nombre}</b><br /><small>Tu enlace de reservas:</small><br />
         <a href={link} target="_blank" rel="noreferrer">{link}</a>{" "}
